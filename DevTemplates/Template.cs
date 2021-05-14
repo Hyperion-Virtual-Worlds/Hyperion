@@ -1,5 +1,6 @@
 /// <license>
-/// SilverSim is distributed under the terms of the
+/// Hyperion Virtual Worlds https://hyperionvirtual.com
+/// is distributed under the terms of the
 /// GNU Affero General Public License v3 with
 /// the following clarification and special exception.
 /// 
