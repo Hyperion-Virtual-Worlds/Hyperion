@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyperion.Common", "Hyperion\Hyperion.Common\Hyperion.Common.csproj", "{BD928A9B-CA96-4EF7-8A84-6D4C54C001ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyperion.Types", "Hyperion\Hyperion.Types\Hyperion.Types.csproj", "{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD928A9B-CA96-4EF7-8A84-6D4C54C001ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD928A9B-CA96-4EF7-8A84-6D4C54C001ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD928A9B-CA96-4EF7-8A84-6D4C54C001ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD928A9B-CA96-4EF7-8A84-6D4C54C001ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {533F92B9-F0BF-424C-8590-E814D7A980EB}
+	EndGlobalSection
+EndGlobal
