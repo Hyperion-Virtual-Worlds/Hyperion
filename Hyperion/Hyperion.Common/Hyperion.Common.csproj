@@ -43,11 +43,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AdminWebIfRequiredRightAttribute.cs" />
+    <Compile Include="Caps\CapsHttpRedirector.cs" />
+    <Compile Include="CmdIO\CommandRegistry.cs" />
+    <Compile Include="CmdIO\TTY.cs" />
+    <Compile Include="ConfigurationLoader.cs" />
+    <Compile Include="ConfigurationLoader.Diagnostics.cs" />
+    <Compile Include="ConfigurationLoader.DnsCache.cs" />
+    <Compile Include="ConfigurationLoader.IpResolver.cs" />
+    <Compile Include="ConfigurationLoader.ServerParams.cs" />
+    <Compile Include="Console\LocalConsole.cs" />
+    <Compile Include="Console\LogConsole.cs" />
+    <Compile Include="HttpServer\Authorization\BasicAuthHandler.cs" />
+    <Compile Include="HttpServer\Authorization\SimpleBasicAuthHandler.cs" />
+    <Compile Include="HttpServer\Http1Request.cs" />
+    <Compile Include="HttpServer\Http1Response.cs" />
+    <Compile Include="HttpServer\Http2Request.cs" />
+    <Compile Include="HttpServer\Http2Response.cs" />
+    <Compile Include="HttpServer\HttpAclHandler.cs" />
+    <Compile Include="HttpServer\HttpJson20RpcHandler.cs" />
+    <Compile Include="HttpServer\HttpRequest.cs" />
+    <Compile Include="HttpServer\HttpRequestBodyStream.cs" />
+    <Compile Include="HttpServer\HttpResponse.cs" />
+    <Compile Include="HttpServer\HttpResponseBodyStream.cs" />
+    <Compile Include="HttpServer\HttpServer.cs" />
+    <Compile Include="HttpServer\HttpServerExceptions.cs" />
+    <Compile Include="HttpServer\HttpXmlRpcHandler.cs" />
+    <Compile Include="HttpServer\IHttpAclListAccess.cs" />
+    <Compile Include="HttpServer\RangeExtensionMethods.cs" />
+    <Compile Include="HttpServer\SslSelfSignCertUtil.cs" />
+    <Compile Include="HttpServer\WebDAV\WebDAVCollection.cs" />
+    <Compile Include="HttpServer\WebDAV\WebDAVFile.cs" />
+    <Compile Include="HttpServer\WebDAV\WebDavResource.cs" />
+    <Compile Include="HttpServer\WebDAV\WebDAVResourceNotFoundException.cs" />
+    <Compile Include="HttpServer\WebDAV\WebDAVServer.cs" />
+    <Compile Include="IAdminWebIF.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="IPluginShutdown.cs" />
+    <Compile Include="IPluginSubFactory.cs" />
+    <Compile Include="IPostLoadStep.cs" />
+    <Compile Include="Log\LogController.cs" />
+    <Compile Include="ConfigurationLoader.ConfigProcessor.cs" />
+    <Compile Include="PluginName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPC.cs" />
+    <Compile Include="SceneLoadingExtensionMethods.cs" />
+    <Compile Include="ServerURIsExtensionMethods.cs" />
+    <Compile Include="SimGridInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Tar\TarArchiveReader.cs" />
+    <Compile Include="Tar\TarArchiveWriter.cs" />
+    <Compile Include="Tar\TarFileType.cs" />
+    <Compile Include="UpdaterControlCommands.cs" />
+    <Compile Include="VersionInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

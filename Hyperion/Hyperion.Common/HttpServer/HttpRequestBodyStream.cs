@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hyperion.Common
+namespace Hyperion.Common.HttpServer
 {
-    class Program
+    class HttpRequestBodyStream
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
