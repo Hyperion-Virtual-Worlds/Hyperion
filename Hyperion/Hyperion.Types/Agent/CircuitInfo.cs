@@ -1,12 +1,15 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hyperion.Types.Agent
 {
-    class CircuitInfo
+    public class CircuitInfo
     {
+        public uint CircuitCode;
+        public string CapsPath = string.Empty;
+        public bool IsChild;
+        public Dictionary<UInt64, string> ChildrenCapSeeds = new Dictionary<UInt64, string>();
     }
 }

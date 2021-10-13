@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Hyperion.Types.Agent
 {
-    class AgentState
+    public enum AgentState : byte
     {
+        Walking = 0,
+        Mouselook = 1,
+        Typing = 2
     }
 }
