@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Hyperion.Types.Account
 {
-    class ClientInfo
+    public struct ClientInfo
     {
+        public string ClientVersion;
+        public string Channel;
+        public string Mac;
+        public string ID0;
+        public string ClientIP;
     }
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Hyperion.Types.Account
 {
-    class SessionInfo
+    public struct SessionInfo
     {
+        public UUID SessionID;
+        public UUID SecureSessionID;
     }
 }
