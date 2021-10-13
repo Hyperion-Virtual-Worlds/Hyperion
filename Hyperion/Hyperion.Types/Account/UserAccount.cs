@@ -13,9 +13,14 @@ namespace Hyperion.Types.Account
         public int UserLevel = -1;
         public UserFlags UserFlags;
         public string UserTitle = string.Empty;
+        public string UserBusiness;
+        public string UserEmployment;
         public bool IsLocalToGrid;
         public bool IsEverLoggedIn;
-        public Dictionary<string, string> ServiceURLs = new Dictionary<string, string>(); /* only valid when IsLocalToGrid is set to false */
+
+        // only valid when IsLocalToGrid is set to false
+        public Dictionary<string, string> ServiceURLs = new Dictionary<string, string>();
+
         public Date LastLogout = Date.Now;
         
         public UserRegionData LastRegion;
@@ -33,6 +38,8 @@ namespace Hyperion.Types.Account
             UserLevel = src.UserLevel;
             UserFlags = src.UserFlags;
             UserTitle = src.UserTitle;
+            UserBusiness = src.UserBusiness;
+            UserEmployment = src.UserEmployment;
             ServiceURLs = new Dictionary<string, string>(src.ServiceURLs);
             IsEverLoggedIn = src.IsEverLoggedIn;
             LastLogout = new Date(src.LastLogout);
