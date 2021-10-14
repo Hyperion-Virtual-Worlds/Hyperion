@@ -1,12 +1,172 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Hyperion.Types.Asset
 {
-    class AssetType
+    public enum AssetType : sbyte
     {
+        Material = -2,
+        Unknown = -1,
+        Texture = 0,
+        Sound = 1,
+        CallingCard = 2,
+        Landmark = 3,
+        //[Obsolete]
+        //Script = 4,
+        Clothing = 5,
+        Object = 6,
+        Notecard = 7,
+        RootFolder = 8,
+        Folder = 8,
+        LSLText = 10,
+        LSLBytecode = 11,
+        TextureTGA = 12,
+        Bodypart = 13,
+        TrashFolder = 14,
+        SnapshotFolder = 15,
+        LostAndFoundFolder = 16,
+        SoundWAV = 17,
+        ImageTGA = 18,
+        ImageJPEG = 19,
+        Animation = 20,
+        Gesture = 21,
+        Simstate = 22,
+        FavoriteFolder = 23,
+        Link = 24,
+        LinkFolder = 25,
+        EnsembleStart = 26,
+        EnsembleEnd = 45,
+        CurrentOutfitFolder = 46,
+        OutfitFolder = 47,
+        MyOutfitsFolder = 48,
+        Mesh = 49,
+        Inbox = 50,
+        Outbox = 51,
+        BasicRoot = 52,
+        MarketplaceListings = 53,
+        MarketplaceStock = 54,
+        Settings = 55
+    }
+
+    public static class AssetTypeExtensionMethods
+    {
+        public static bool IsNoCopyAffectingContainingObject(this AssetType v)
+        {
+            bool affecting = false;
+
+            switch (v)
+            {
+                case AssetType.Object:
+                case AssetType.Gesture:
+                case AssetType.Clothing:
+                case AssetType.Bodypart:
+                case AssetType.Settings:
+                    affecting = true;
+                    break;
+            }
+
+            return affecting;
+        }
+
+        public static string AssetTypeToString(this AssetType v)
+        {
+            switch (v)
+            {
+                case AssetType.Texture:
+                    return "texture";
+                case AssetType.Sound:
+                    return "sound";
+                case AssetType.CallingCard:
+                    return "callcard";
+                case AssetType.Landmark:
+                    return "Landmark";
+                case AssetType.Clothing:
+                    return "clothing";
+                case AssetType.Object:
+                    return "object";
+                case AssetType.Notecard:
+                    return "notecard";
+                case AssetType.LSLText:
+                    return "lsltext";
+                case AssetType.LSLBytecode:
+                    return "lslbyte";
+                case AssetType.TextureTGA:
+                    return "txtr_tga";
+                case AssetType.Bodypart:
+                    return "bodypart";
+                case AssetType.SoundWAV:
+                    return "snd_wav";
+                case AssetType.ImageTGA:
+                    return "img_tga";
+                case AssetType.ImageJPEG:
+                    return "jpeg";
+                case AssetType.Animation:
+                    return "animatn";
+                case AssetType.Gesture:
+                    return "gesture";
+                case AssetType.Simstate:
+                    return "simstate";
+                case AssetType.Link:
+                    return "link";
+                case AssetType.LinkFolder:
+                    return "link_f";
+                case AssetType.Mesh:
+                    return "mesh";
+                case AssetType.Settings:
+                    return "settings";
+                default:
+                    return "unknown";
+            }
+        }
+
+        public static AssetType StringToAssetType(this string s)
+        {
+            switch (s)
+            {
+                case "texture":
+                    return AssetType.Texture;
+                case "sound":
+                    return AssetType.Sound;
+                case "callcard":
+                    return AssetType.CallingCard;
+                case "landmark":
+                    return AssetType.Landmark;
+                case "clothing":
+                    return AssetType.Clothing;
+                case "object":
+                    return AssetType.Object;
+                case "notecard":
+                    return AssetType.Notecard;
+                case "lsltext":
+                    return AssetType.LSLText;
+                case "lslbyte":
+                    return AssetType.LSLBytecode;
+                case "txtr_tga":
+                    return AssetType.TextureTGA;
+                case "bodypart":
+                    return AssetType.Bodypart;
+                case "snd_wav":
+                    return AssetType.SoundWAV;
+                case "img_tga":
+                    return AssetType.ImageTGA;
+                case "jpeg":
+                    return AssetType.ImageJPEG;
+                case "animatn":
+                    return AssetType.Animation;
+                case "gesture":
+                    return AssetType.Gesture;
+                case "simstate":
+                    return AssetType.Simstate;
+                case "link":
+                    return AssetType.Link;
+                case "link_f":
+                    return AssetType.LinkFolder;
+                case "mesh":
+                    return AssetType.Mesh;
+                case "settings":
+                    return AssetType.Settings;
+                default:
+                    return AssetType.Unknown;
+            }
+        }
     }
 }

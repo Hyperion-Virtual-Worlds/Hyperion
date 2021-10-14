@@ -1,12 +1,37 @@
-﻿using System;
+﻿
+
+using Hyperion.Threading;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hyperion.Types.Asset.Format
 {
-    class NotecardInventory
+    public class NotecardInventory : RwLockedDictionary<UUID, NotecardInventoryItem>
     {
+        #region ExtCharIndex Access
+
+        public NotecardInventoryItem this[uint extCharIndex]
+        {
+            get
+            {
+                try
+                {
+                    foreach (NotecardInventoryItem item in Values)
+                    {
+                        if (item.ExtCharIndex == extCharIndex)
+                        {
+                            throw new ReturnValueException<NotecardInventoryItem>(item);
+                        }
+                    }
+                }
+                catch (ReturnValueException<NotecardInventoryItem> e)
+                {
+                    return e.Value;
+                }
+
+                throw new KeyNotFoundException("ExtCharIndex " + extCharIndex.ToString() + " not found");
+            }
+        }
+
+        #endregion
     }
 }

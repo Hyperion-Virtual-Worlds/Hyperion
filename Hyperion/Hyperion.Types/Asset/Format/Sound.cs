@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using NVorbis;
 
 namespace Hyperion.Types.Asset.Format
 {
-    class Sound
+    public sealed class Sound
     {
+        /// <summary>
+        /// duration in seconds
+        /// </summary>
+        public double Duration;
+
+        public Sound(AssetData data)
+        {
+            using (VorbisReader reader = new VorbisReader(data.InputStream, true))
+            {
+                Duration = reader.TotalTime.TotalSeconds;
+            }
+        }
     }
 }
