@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyperion.Common", "Hyperion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyperion.Types", "Hyperion\Hyperion.Types\Hyperion.Types.csproj", "{AB9E4581-497C-48CE-9EC4-EACB2F54D7C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7374CA81-210C-48FB-920F-5774E0868949}"
+	ProjectSection(SolutionItems) = preProject
+		ProductAssemblyInfo.cs = ProductAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
