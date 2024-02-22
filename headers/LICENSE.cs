@@ -21,16 +21,3 @@
 /// obligated to do so. If you do not wish to do so, delete this
 /// exception statement from your version.
 /// </license>
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Hyperion.Types
-{
-    class TypeExtensionMethods
-    {
-    }
-}

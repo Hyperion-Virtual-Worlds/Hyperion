@@ -26,35 +26,67 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+/// <summary>
+/// General Information
+/// 
+/// This is the general information about an
+/// assembly is controlled through the following
+/// set of attributes.  We change these attribute
+/// values to modify the information associated
+/// with an assembly.
+/// </summary>
 [assembly: AssemblyTitle("Hyperion.Types")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Hyperion.Types")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright (c) Virtual World Research Inc. 2007-2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Setting ComVisible to false makes the types in this assembly not visible
-// to COM components.  If you need to access a type in this assembly from
-// COM, set the ComVisible attribute to true on that type.
+/// <summary>
+/// ComVisible Settings
+/// 
+/// By setting the ComVisible to false we make the
+/// types in this assembly invisible to COM components.
+/// If we need to access a type in this assembly from COM,
+/// then we set the ComVisible attribute to true on that type.
+/// </summary>
 [assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
+/// <summary>
+/// GUID Information
+/// 
+/// The following GUID is for the ID of the typelib if
+/// this project is exposed to COM.
+/// 
+/// The GUID can be generated at:
+///     https://www.guidgenerator.com/
+///     
+/// Whenever we create a new project 
+/// directory, a new AssemblyInfo file
+/// will be required, and each AssemblyInfo.cs
+/// file must have its own GUID.
+/// </summary>
 [assembly: Guid("ab9e4581-497c-48ce-9ec4-eacb2f54d7c0")]
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
+/// <summary>
+/// Version Information
+/// 
+/// The Version information for an assembly
+/// consists of the following four values:
+/// 
+///     Major Version
+///     Minor Version
+///     Build Number
+///     Revision
+///     
+/// We can set the Build and Revsision number by using
+/// the Build and Revision number or by simply
+/// using the "*" value for the Build and Revsion Number
+/// as follows:
+///     
+///     [assembly: AssemblyVersion("1.0.0.*")]
+/// </summary>
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
