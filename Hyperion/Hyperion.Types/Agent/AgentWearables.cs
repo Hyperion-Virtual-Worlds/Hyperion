@@ -22,11 +22,11 @@
 /// exception statement from your version.
 /// </license>
 
-using Hyperion.Threading;
-using Hyperion.Types.Asset.Format;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Hyperion.Threading;
+using Hyperion.Types.Asset.Format;
 
 namespace Hyperion.Types.Agent
 {

@@ -22,15 +22,15 @@
 /// exception statement from your version.
 /// </license>
 
-using Hyprion.Threading;
-using Hyperion.Types.Asset.Format;
-using Hyperion.Types.StructuredData.Llsd;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Threading;
 using System.Xml;
+using Hyperion.Threading;
+using Hyperion.Types.Asset.Format;
+using Hyperion.Types.StructuredData;.Llsd;
 
 namespace Hyperion.Types.Agent
 {

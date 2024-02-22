@@ -22,12 +22,12 @@
 /// exception statement from your version.
 /// </license>
 
-using Ionic.Zlib;
-using Hyperion.Types.StructuredData.Llsd;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using Hyperion.Types.StructuredData.Llsd;
+using Ionic.Zlib;
 
 namespace Hyperion.Types.Asset.Format.Mesh
 {

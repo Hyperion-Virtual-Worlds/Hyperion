@@ -22,8 +22,8 @@
 /// exception statement from your version.
 /// </license>
 
-using Hyperion.Types.Agent;
 using System.Collections.Generic;
+using Hyperion.Types.Agent;
 
 namespace Hyperion.Types.Account
 {
@@ -40,7 +40,10 @@ namespace Hyperion.Types.Account
         public bool IsLocalToGrid;
         public bool IsEverLoggedIn;
 
-        // only valid when IsLocalToGrid is set to false
+        /// <summary>
+        /// This is only valid when IsLocalToGrid 
+        /// is set to false
+        /// </summary>
         public Dictionary<string, string> ServiceURLs = new Dictionary<string, string>();
 
         public Date LastLogout = Date.Now;

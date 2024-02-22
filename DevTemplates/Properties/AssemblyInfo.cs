@@ -23,7 +23,6 @@
 /// </license>
 
 using System.Reflection;
-using System.Runtime.InteropServices;
 
 /// <summary>
 /// General Information
@@ -37,55 +36,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Virtual World Research Inc.")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Copyright (c) Virtual World Research Inc. 2007-2009")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-/// <summary>
-/// ComVisible Settings
-/// 
-/// By setting the ComVisible to false we make the
-/// types in this assembly invisible to COM components.
-/// If we need to access a type in this assembly from COM,
-/// then we set the ComVisible attribute to true on that type.
-/// </summary>
-[assembly: ComVisible(false)]
-
-/// <summary>
-/// GUID Information
-/// 
-/// The following GUID is for the ID of the typelib if
-/// this project is exposed to COM.
-/// 
-/// The GUID can be generated at:
-///     https://www.guidgenerator.com/
-///     
-/// Whenever we create a new project 
-/// directory, a new AssemblyInfo file
-/// will be required, and each AssemblyInfo.cs
-/// file must have its own GUID.
-/// </summary>
-[assembly: Guid("b541b244-3d1d-4625-9003-bc2a3a6a39a4")]
-
-/// <summary>
-/// Version Information
-/// 
-/// The Version information for an assembly
-/// consists of the following four values:
-/// 
-///     Major Version
-///     Minor Version
-///     Build Number
-///     Revision
-///     
-/// We can set the Build and Revsision number by using
-/// the Build and Revision number or by simply
-/// using the "*" value for the Build and Revsion Number
-/// as follows:
-///     
-///     [assembly: AssemblyVersion("1.0.0.*")]
-/// </summary>
-[assembly: AssemblyVersion("1.0.0.*")]
-[assembly: AssemblyFileVersion("1.0.0.0")]

@@ -23,14 +23,109 @@
 /// </license>
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Hyperion.Common
 {
-    class VersionInfo
+    public static class VersionInfo
     {
+        public static string ProductName => "Hyperion";
+
+        public static string Shard => "Development";
+
+        public static string Version => "Development";
+
+        public static bool IsPlatformMono => Type.GetType("Mono.Runtime") != null;
+
+        public static string RuntimeInformation
+        {
+            get
+            {
+                string ru = String.Empty;
+
+                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                {
+                    ru = "Win";
+                }
+                else if (Environment.OSVersion.Platform == PlatformID.MacOSX)
+                {
+                    ru = "OSX";
+                }
+                else
+                {
+                    ru = Environment.OSVersion.Platform.ToString();
+                }
+
+                if (IsPlatformMono)
+                {
+                    Type type = Type.GetType("Mono.Runtime");
+
+                    if (type != null)
+                    {
+                        MethodInfo displayName = type.GetMethod("GetDisplayName", BindingFlags.NonPublic | BindingFlags.Static);
+                        ru += displayName != null ? "/" + displayName.Invoke(null, null) : "/Mono";
+                    }
+                    else
+                    {
+                        ru += "/Mono";
+                    }
+                }
+                else
+                {
+                    ru += "/.NET";
+                }
+
+                return ru;
+            }
+        }
+
+        public static string ArchSpecificId
+        {
+            get
+            {
+                var ru = new StringBuilder();
+                ru.Append(Environment.OSVersion.Platform.ToString());
+                ru.Append('-');
+                ru.Append(Environment.Is64BitProcess ? "64" : "32");
+                return ru.ToString();
+            }
+        }
+
+        public static string PlatformLibPath
+        {
+            get
+            {
+                var ru = new StringBuilder("platform-libs/");
+
+                switch (Environment.OSVersion.Platform)
+                {
+                    case PlatformID.Win32NT:
+                        ru.Append("windows/");
+                        break;
+
+                    case PlatformID.MacOSX:
+                        ru.Append("macosx/");
+                        break;
+
+                    case PlatformID.Unix:
+                        ru.Append("unix/");
+                        break;
+
+                    default:
+                        ru.Append("unknown/");
+                        break;
+                }
+
+                ru.Append(Environment.Is64BitProcess ? "64" : "32");
+                return ru.ToString();
+            }
+        }
+
+        public static string SimulatorVersion => string.Format("{0} {1} {2} {3}", ProductName, Version, RuntimeInformation, MachineWidth);
+
+        public static string MachineWidth => Environment.Is64BitProcess ?
+                    "64-bit" :
+                    "32-bit";
     }
 }

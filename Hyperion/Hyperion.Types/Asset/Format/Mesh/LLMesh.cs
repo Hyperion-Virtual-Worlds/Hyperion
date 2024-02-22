@@ -22,9 +22,9 @@
 /// exception statement from your version.
 /// </license>
 
-using Hyperion.Types.StructuredData.Llsd;
 using System;
 using System.IO;
+using Hyperion.Types.StructuredData.Llsd;
 
 namespace Hyperion.Types.Asset.Format.Mesh
 {
@@ -221,7 +221,11 @@ namespace Hyperion.Types.Asset.Format.Mesh
         private const int MeshTriangleBudget = 250000;
         private const int MaxDistance = 512;
 
-        // Streaming cost algorithm close to what is known
+        /// <summary>
+        /// Streaming cost algorithm close to what is known
+        /// </summary>
+        /// <param name="primscale"></param>
+        /// <returns></returns>
         public double CalculateStreamingCost(Vector3 primscale)
         {
             double radius = primscale.Length / 2;

@@ -26,6 +26,11 @@ namespace Hyperion.Types.Agent
 {
     public enum AgentState : byte
     {
+        /// <summary>
+        /// TODO: Determine if there are 
+        /// actually other AgentStates that 
+        /// need to be added
+        /// </summary>
         Walking = 0,
         Mouselook = 1,
         Typing = 2
